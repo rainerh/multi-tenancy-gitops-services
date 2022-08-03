@@ -1,0 +1,11 @@
+apiVersion: cpd.ibm.com/v1
+kind: Ibmcpd
+metadata:
+  name: ibmcpd-cr
+spec:
+  license:
+    accept: true
+    license: Enterprise
+  storageClass: managed-nfs-storage
+  zenCoreMetadbStorageClass: managed-nfs-storage
+  version: "4.0.1"

@@ -1,0 +1,70 @@
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-operator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: IBM Operator Catalog
+  publisher: IBM
+  sourceType: grpc
+  image: icr.io/cpopen/ibm-operator-catalog
+  updateStrategy:
+    registryPoll:
+      interval: 45m
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: opencloud-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: IBMCS Operators
+  publisher: IBM
+  sourceType: grpc
+  image: docker.io/ibmcom/ibm-common-service-catalog:latest
+  updateStrategy:
+    registryPoll:
+      interval: 45m
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: iaf-core-operators
+  namespace: openshift-marketplace
+spec:
+  displayName: IAF Core Operators
+  publisher: IBM
+  sourceType: grpc
+  image: icr.io/cpopen/ibm-automation-foundation-core-catalog
+  updateStrategy:
+    registryPoll:
+      interval: 45m
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-automation-processminings
+  namespace: openshift-marketplace
+spec:
+  displayName: IBM ProcessMining Operators
+  publisher: IBM
+  sourceType: grpc
+  image: icr.io/cpopen/processmining-operator-catalog
+  updateStrategy:
+    registryPoll:
+      interval: 45m
+---
+apiVersion: operators.coreos.com/v1alpha1
+kind: CatalogSource
+metadata:
+  name: ibm-db2uoperator-catalog
+  namespace: openshift-marketplace
+spec:
+  displayName: IBM Db2U Catalog
+  publisher: IBM
+  sourceType: grpc
+  image: ibmcom/ibm-db2uoperator-catalog@sha256:7e416ff563492b05daf270e3d8792b1edb70cf6e03bd6a1afca3bc1110f39346
+  updateStrategy:
+    registryPoll:
+      interval: 45m

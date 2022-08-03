@@ -1,0 +1,12 @@
+global: {}
+
+ibm-automation-foundation-core-operator:
+  subscriptions:
+    ibmautomation:
+      name: ibm-automation-foundation-core
+      subscription:
+        channel: v1.2
+        installPlanApproval: Automatic
+        name: ibm-automation-core
+        source: iaf-core-operators
+        sourceNamespace: openshift-marketplace
